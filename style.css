@@ -1,12 +1,37 @@
 body{
-
+    display: flex;
 }
-
+:root{
+    --body-font:3rem;
+}
 .bg-container{
     background-image: url("./assets/halie-west-25xggax4bSA-unsplash.jpg");
     background-color: aquamarine;
+    background-size:auto 100%;
+    width: 40%;
+    height: 100vh;
 }
 
 .body-container{
-    background-color: antiquewhite;
+    background-color: rgb(255, 249, 241);
+    width: 60%;
+    padding:60px;
+}
+
+.heading{
+    font-size: var(--body-font);
+}
+.heading :first-child{
+    margin-bottom: 30px;
+}
+.heading :last-child{
+    margin-bottom: 50px;
+}
+
+.form-container p{
+    font-size: var(--body-font);
+}
+
+form label{
+    font-size: 1.1rem;
 }
