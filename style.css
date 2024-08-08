@@ -1,3 +1,12 @@
+body{
+
+}
+
 .bg-container{
     background-image: url("./assets/halie-west-25xggax4bSA-unsplash.jpg");
+    background-color: aquamarine;
+}
+
+.body-container{
+    background-color: antiquewhite;
 }
