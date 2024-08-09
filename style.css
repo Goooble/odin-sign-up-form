@@ -13,7 +13,7 @@ body{
 .bg-container{
     background-image: url("./assets/halie-west-25xggax4bSA-unsplash.jpg");
     background-color: aquamarine;
-    background-size:auto 100%;
+    background-size:100% 100%;
     width: 40%;
     height: 100vh;
 }
