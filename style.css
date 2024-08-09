@@ -5,9 +5,10 @@
 
 body{
     display: flex;
+    background-color: rgb(249, 250, 251);
 }
 :root{
-    --body-font:2.5rem;
+    --body-font:2.2rem;
     font-family: Garamond, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .bg-container{
@@ -16,23 +17,30 @@ body{
     background-size:cover;
     width: 40%;
     height: 100vh;
-    background-repeat: no-repeat;
+    
 }
 
 .body-container{
-    background-color: rgb(249, 250, 251);
+    
     width: 60%;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .body-container>div{
-    padding: 40px;
+    padding-left: 60px;
+    padding-right: 200px;
 }
 
 .heading{
     font-size: var(--body-font);
     line-height: 1.2;
 }
+.heading, .form-container>p{
+    font-weight:600;}
 .heading :first-child{
     margin-bottom: 30px;
 }
@@ -42,10 +50,41 @@ body{
 
 .form-container p{
     font-size: var(--body-font);
+    margin-bottom: 10px;
 }
 .form-container{
     background-color: white;
     box-shadow:5px 5px 10px rgb(221, 222, 222);
+    padding-top: 10px;
+}
+
+.create-container{
+    margin-top: 60px;
+    
+}
+
+.create-container p{
+    margin-top: 30px;
+}
+
+.create-container button{
+    padding: 20px 50px;
+    width: 400px;
+    color: white;
+    background-color: #596D48;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.create-container p{
+    font-size: 1.5rem;
+}
+
+.create-container a{
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
 }
 
 form label{
