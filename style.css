@@ -113,12 +113,24 @@ form input{
 }
 
 input:focus-visible{
-    outline: 1px solid blue;
+    outline:none;
+    border: 1px solid blue;
     box-shadow: 2px 2px 5px rgb(61, 61, 61);
 }
-input:invalid{
-    outline: 1px solid red;
+
+input:valid{
+    border: 1px solid blue;
 }
+.required:invalid{
+    border: 1px solid red;
+}
+div:has( > .required:invalid)::after{
+    content:"required";
+    color: red;
+    font-size: var(--label-font);
+}
+
+
 
 .create-container{
     margin-top: 60px;
