@@ -1,8 +1,14 @@
+@font-face {
+    font-family: odin;
+    src: url(./assets/webfontkit-20240809-050030/norse-bold-webfont.woff2), url(./assets/webfontkit-20240809-050030/norse-bold-webfont.woff);
+}
+
 body{
     display: flex;
 }
 :root{
     --body-font:3rem;
+    font-family: Garamond, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .bg-container{
     background-image: url("./assets/halie-west-25xggax4bSA-unsplash.jpg");
