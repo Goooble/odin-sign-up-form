@@ -9,6 +9,7 @@ body{
 }
 :root{
     --body-font:2.2rem;
+    --label-font:1.1rem;
     font-family: Garamond, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .bg-container{
@@ -31,9 +32,12 @@ body{
 }
 
 .body-container>div{
-    padding-left: 60px;
-    padding-right: 200px;
+    /* if i add this to body ocntainer itself 
+    then form will also get padded meaning teh box shadow wont extend till the end */
+    padding-left: 70px;
+    padding-right: 400px;
 }
+
 
 .heading{
     font-size: var(--body-font);
@@ -45,17 +49,50 @@ body{
     margin-bottom: 30px;
 }
 .heading :last-child{
-    margin-bottom: 50px;
+    margin-bottom: 80px;
+}
+
+.heading span{
+    font-style: italic;
 }
 
 .form-container p{
     font-size: var(--body-font);
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .form-container{
     background-color: white;
     box-shadow:5px 5px 10px rgb(221, 222, 222);
-    padding-top: 10px;
+    padding-top:30px;
+    padding-bottom: 60px;
+}
+
+form label{
+    font-size: var(--label-font);
+    color: grey;
+    font-weight: bold;
+}
+
+.form-element-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    width: 800px;
+}
+
+.form-element-cont div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+form input{
+    font-size: calc(var(--label-font) + 5px);
+    width: 350px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 .create-container{
@@ -87,6 +124,3 @@ body{
     font-weight: bold;
 }
 
-form label{
-    font-size: 1.1rem;
-}
