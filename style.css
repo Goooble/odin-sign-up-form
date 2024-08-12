@@ -123,26 +123,40 @@ input:focus-visible{
 input:valid{
     border: 1px solid blue;
 }
-.required:not(.email-entered):invalid{
+
+.required:not(:is(.email-entered)):invalid{
+    /* triggers only after create account is pressed */
     border: 1px solid red;
 }
-div:has( > .required:not(.email-entered):invalid)::after{
+div:has( > .required:not(:is(.email-entered, .pass-no-match, .phone-invalid)):invalid)::after{
     content:"required";
     color: red;
     font-size: var(--label-font);
 }
 
 /* email */
-:where(.email-entered):invalid{
+.email-entered:invalid{
     border: 1px solid red;
 }
-div:has( > :where(.email-entered):invalid)::after{
+div:has( > .email-entered:invalid)::after{
     content:"enter a proper email address";
     color: red;
     font-size: var(--label-font);
 }
 
+/* password */
+div:has( > .pass-no-match)::after{
+    content:"passwords dont match";
+    color: red;
+    font-size: var(--label-font);
+}
 
+/* phone */
+div:has( > .phone-invalid)::after{
+    content:"enter a proper phone number";
+    color: red;
+    font-size: var(--label-font);
+}
 .create-container{
     margin-top: 60px;
     
