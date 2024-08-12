@@ -5,6 +5,8 @@ const pass = document.querySelector("#password");
 const repass = document.querySelector("#repassword");
 const phone = document.querySelector("#phone");
 
+
+//password checker trigges at create accoutn while email and phone trigger at out of focus
 create.addEventListener("click", () => {
   //only just so that this gets triggered after the create account
   //button has been pressed
@@ -27,6 +29,8 @@ create.addEventListener("click", () => {
 email.classList.toggle("email-entered");
 repass.classList.toggle("pass-no-match");
 phone.classList.toggle("phone-invalid");
+
+//email
 email.addEventListener("focusout", () => {
   if (email.value !== "") {
     if (!email.classList.contains("email-entered")) {
@@ -39,6 +43,8 @@ email.addEventListener("focusout", () => {
   }
 });
 
+
+//phone
 phone.addEventListener("focusout", () => {
   phone.value.split("").forEach((ele, index) => {
     if (
