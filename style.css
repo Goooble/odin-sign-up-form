@@ -29,6 +29,8 @@ body{
     justify-content: center;
     margin-top: 250px;
     padding: 20px;
+    width: 40%;
+    position: fixed;
 }
 
 .title img{

@@ -8,6 +8,7 @@ create.addEventListener("click", () => {
 
   required.forEach((ele) => ele.classList.add("required"));
 });
+
 email.classList.toggle("email-entered"); //to turn it off by default
 email.addEventListener("focusout", () => {
     if(email.value !== ""){
