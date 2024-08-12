@@ -14,7 +14,7 @@ body{
 }
 .bg-container{
     background-image: url("./assets/halie-west-25xggax4bSA-unsplash.jpg");
-    background-color: aquamarine;
+    background-color: green;
     background-size:cover;
     width: 40%;
     height: 1420px;
@@ -121,15 +121,24 @@ input:focus-visible{
 input:valid{
     border: 1px solid blue;
 }
-.required:invalid{
+.required:not(.email-entered):invalid{
     border: 1px solid red;
 }
-div:has( > .required:invalid)::after{
+div:has( > .required:not(.email-entered):invalid)::after{
     content:"required";
     color: red;
     font-size: var(--label-font);
 }
 
+/* email */
+:where(.email-entered):invalid{
+    border: 1px solid red;
+}
+div:has( > :where(.email-entered):invalid)::after{
+    content:"enter a proper email address";
+    color: red;
+    font-size: var(--label-font);
+}
 
 
 .create-container{
